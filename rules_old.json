@@ -1,0 +1,16 @@
+﻿{
+    "nbcnews.com": [
+        { "title": "<title>(.*)</title>", "date": "<div class=\"dateline\">(.*)&#149;", "content": "<meta property=\"og:description\" content=\"(.*)\" />" },
+        { "title": "<title>(.*)</title>", "date": "<meta name=\"DC.date.issued\" content=\"(.*)\"/>", "content": "<meta property=\"og:description\" content=\"(.*)\" />" },
+        { "title": "<title>(.*)</title>", "date": "Posted by \\w+ \\w+ on (.*),", "content": "<meta property=\"og:description\" content=\"(.*)\" />" },
+        { "title": "<title>(.*)</title>", "date": "published-date(.*)</div>", "content": "<meta property=\"og:description\" content=\"(.*)\" />" },
+        { "title": "<title>(.*)</title>", "date": "requestedAt: (\\d\\d/\\d\\d/\\d\\d\\d\\d) \\d+", "content": "<meta property=\"og:description\" content=\"(.*)\" />" }
+    ],
+    "huffingtonpost.com": [
+        { "title": "<title>(.*)</title>", "date": "<time datetime.*>(.*)</time>", "content": "<!-- Entry Text -->\\s+(.*)\\W\\s+<" }
+        
+    ]
+}
+
+
+

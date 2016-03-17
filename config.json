@@ -1,0 +1,6 @@
+﻿{
+    "input_folder": "D:\\Markus\\SocialNewsScrapes\\2015_01_30_23\\2015_01_30_23\\0\\articles",
+    "rule": "rules1.json",
+    "publisher": "nbcnews.com",
+    "output" :  "D:\\temp_2015_nbc.txt"
+}

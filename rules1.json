@@ -1,0 +1,162 @@
+﻿{
+    "nbcnews.com": [
+        {
+            "title": "<title>(.*)</title>",
+            "date": "<div class=\"dateline\">(.*)&#149;",
+            "content": [
+                {
+                    "rule": "<div id=\"at_0\" class=\"articleText\" itemprop=\"articleBody\">\\s+(.*)\\s+(.*)\\s+(.*)\\s+(.*)</p>",
+                    "count": 4
+                }
+            ],
+            "method": "regex"
+        },
+        {
+            "title": "<title>(.*)</title>",
+            "date": "<meta name=\"DC.date.issued\" content=\"(.*)\"\\s*/>",
+            "content": [
+                {
+                    "rule": "<div class=\"stack-dropcap\">\\s*(.*)</p>",
+                    "count": 1
+                }
+            ],
+            "method": "regex"
+        },
+        {
+            "title": "<title>(.*)</title>",
+            "date": "<span class=\"date-display-single\" property=\"dc:date\" datatype=\"xsd:dateTime\" content=\"(.*)\">",
+            "content": [
+                {
+                    "rule": "<div class=\"field-item even\" property=\"content:encoded\">(.*)</p>\\s+<p>(.*)</p>\\s+<p>(.*)</p>\\s+<p>(.*)</p>",
+                    "count": 3
+                }
+            ],
+            "method": "regex"
+        },
+        {
+            "title": "<title>(.*)</title>",
+            "date": "Posted by \\w+ \\w+ on (.*),",
+            "content": [
+                {
+                    "rule": "<span class=\"enclosure\"\\s+(.*)</p>\\s+<p>(.*)</p>",
+                    "count": 2
+                }
+            ],
+            "method": "regex"
+        },
+        {
+            "title": "<title>(.*)</title>",
+            "date": "<meta name=\"DC.date.issued\" content=\"(.*)\"\\s*/>",
+            "content": [
+                {
+                    "rule": "<p>(.+)</p>",
+                    "count": 1
+                }
+            ],
+            "method": "regex"
+        },
+        {
+            "title": "<title>(.*)</title>",
+            "date": "requestedAt: (\\d\\d/\\d\\d/\\d\\d\\d\\d) \\d+",
+            "content": [
+                {
+                    "rule": "<meta property=\"og:description\" content=\"(.*)\" />",
+                    "count": 1
+                }
+            ],
+            "method": "regex"
+        },
+    ],
+    "huffingtonpost.com": [
+        {
+            "title": "<title>(.*)</title>",
+            "date": "<time datetime.*>(.*)</time>",
+            "content": [
+                {
+                    "rule": "<!-- Entry Text -->\\s+(.*)\\W\\s*<",
+                    "count": 1
+                }
+            ],
+            "method": "regex"
+        }
+    ],
+    "nytimes.com": [
+        {
+            "title": "<title>(.*)</title>",
+            "date": "<meta name=\"DISPLAYDATE\" content=\"(.*)\" />",
+            "content": [
+                {
+                    "rule": "itemprop=\"articleBody\"(.*)\\s*</p>",
+                    "count": 1
+                }
+            ],
+            "method": "regex"
+        },
+        {
+            "title": "<title>(.*)</title>",
+            "date": "<meta name=\"DISPLAYDATE\" content=\"(.*)\" />",
+            "content": [
+                {
+                    "rule": "class=\"story-body-text story-content\"(.*)\\s*</p>",
+                    "count": 1
+                }
+            ],
+            "method": "regex"
+        },
+        {
+            "title": "<title>(.*)",
+            "date": "<meta name=\"pdate\" content=\"(.*)\"\\s*>",
+            "content": [
+                {
+                    "rule": "<div class=\"topnote\" itemprop=\"description\">\\s+(.*)\\s+",
+                    "count": 1
+                }
+            ],
+            "method": "regex"
+        },
+        {
+            "title": "<title>(.*)</title>",
+            "date": "<div id=\"date\">\\s*<p>\\s*(.*)\\s*</p>",
+            "content": [
+                {
+                    "rule": "<p class=\"summary\\s+(.*)\\s*</p>",
+                    "count": 1
+                }
+            ],
+            "method": "regex"
+        },
+        {
+            "title": "<title>(.*)</title>",
+            "date": "<meta name=\"pdate\" content=\"(.*)\"\\s*/?>",
+            "content": [
+                {
+                    "rule": "<div class=\"articleBody\">\\s*(.*)\\s*([\\w+\\s+]*)<p>",
+                    "count": 2
+                }
+            ],
+            "method": "regex"
+        },
+        {
+            "title": "<title>(.*)</title>",
+            "date": "<meta name=\"pdate\" content=\"(.*)\"\\s*/>",
+            "content": [
+                {
+                    "rule": "<div class=\"g-intro\">\\s*(.*)\\s*(.*)",
+                    "count": 3
+                }
+            ],
+            "method": "regex"
+        },
+        {
+            "title": "<title>(.*)</title>",
+            "date": "<meta name=\"pdate\" content=\"(.*)\"\\s*/>",
+            "content": [
+                {
+                    "rule": "<p>(.*)</p>",
+                    "count": 1
+                }
+            ],
+            "method": "regex"
+        },
+    ]
+}
